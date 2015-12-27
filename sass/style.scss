@@ -1,92 +1,211 @@
-$upper-color: #4BE7C1;
-$lower-color: #B8E986;
+$upper-color: #09243B;
+$lower-color: #061622;
+$line-color: #18BDD1;
+$h2-text-color: #B2FF39;
+$border-blue: #18BDD1;
+
+html {
+	height: 100%;
+}
 
 body {
+	height: 100%;
 	margin: 0;
+	background-color: $upper-color;
+	position: relative;
 
 }
 
-.main {
+.header {
+	top: 100px;
+	height: 100%;
 	width: 100%;
-}
+	position: relative;
 
 	.upper-container {
 		/* Rectangle 6: */
-		width: 100%;
-		height: 250px;
-		margin: auto;
+		height: 100%;
 		background: $upper-color;
+		background-size: cover;
 		float: left;
+		position: relative;
+		z-index: 0;
 
 		h1 {
 			font-family: AvenirNext-Bold;
 			font-size: 80px;
 			color: #FFFFFF;
 			padding-left: 25px;
+			white-space: nowrap;
+  			overflow: hidden;
+  			width: 10em;
+ 			max-width: 30em;
 			margin-top: 30px;
-			margin-bottom: 10px;
+			margin-bottom: 0px;
+			animation: type 2s steps(60, end);
+			transition: all 1s;
+
+			&:nth-child(2){
+  				animation: type2 8s steps(60, end);
+			}
+
+			span {
+				font-family: 'Courier';
+				padding-bottom: 100px;
+				font-size: 50px;
+  				animation: blink 1s infinite;
+			}
+		}
+
+		@keyframes type{ 
+		  from { width: 0; } 
+		} 
+
+		@keyframes type2{
+		  0%{width: 0;}
+		  50%{width: 0;}
+		  100%{ width: 100; } 
+		} 
+
+		@keyframes blink{
+		  to{opacity: .0;}
 		}
 
 		h2 {
 
-			font-family: LetterGothicStd;
-			font-size: 35px;
-			color: #415B18;
+			font-family: 'Abel', sans-serif;
+			font-size: 45px;
+			color: $h2-text-color;
 			padding-left: 25px;
-			margin-top: 10px;
-			margin-bottom: 25px;
+			margin-top: 5px;
+			margin-bottom: 10px;
 			font-weight: 200;
-			line-height: 25px;
+			line-height: 35px;
+			transition: all 1s;
 		}
 	}
+}
 
-	.circle {
-		position: absolute;
-	    z-index: 1;
-	    width: 85px;
-	    height: 85px;
-	    background-color: yellow;
-	    -webkit-border-radius: 50px;
-	    -moz-border-radius: 50px;
-	/*  border-color: white;
-		border-style: solid;*/
-	    border-radius: 50px; 
-	    float: right;
-	    overflow: hidden;
-	    margin: 210px auto auto 84%;
+.circle {
+	position: absolute;
+    z-index: 1;
+	width: 10em;
+	height: 10em;
+	background-color:#BA1816;
+	color: white;
+	border: none;
+	border-radius: 5em;
+	cursor: pointer;
+	outline: none;
+    background-color: yellow;
+    float: right;
+    overflow: hidden;
+    margin: 5% auto auto 84%;
 
-	    img {
-	    	width: 85px;
-	    	padding-right: 30px;
-	    }
-
+    img {
+    	width: 85px;
+    	padding-right: 30px;
+    }
+	
+	&:hover {
+		opacity: 0;
 	}
 
-	.lower-container {
-		/* Rectangle 7: */
-		height: 44.668em;
-		width: 100%;
-		margin: 5px auto auto auto;
-		background: $lower-color;
+	.rotate {
+		transform: rotate (45deg);
+	}
+
+}
+
+
+.lower-container {
+	/* Rectangle 7: */
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: $lower-color;
+	position: relative;
+	color: white;
+	float: left;
+	z-index: 1;
+}
+
+.click-me {
+	width: 10em;
+	height: 10em;
+	background-color:#BA1816;
+	color: white;
+	border: none;
+	border-radius: 5em;
+	cursor: pointer;
+	outline: none;
+}
+
+.bar {
+  background: none;
+  color: #fff;
+  width: 100%;
+  height: 4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 1s;
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    overflow: hidden;
+    float: right;
+  }
+
+	li {
 		float: left;
-		-moz-box-shadow:    0px -1px 0.5px 0px rgba(0,0,0,0.50);
-		box-shadow:         0px -1px 0.5px 0px rgba(0,0,0,0.50);
 	}
+
+	li a {
+		color: white;
+	    display: block;
+	    padding: 8px;
+	    text-align: center;
+	    padding: 14px 18px;
+	    text-decoration: none;
+	}
+
+	.active {
+    	color: $h2-text-color;
+	}
+
+}
+
+.bar-background {
+	background-color: #17232A;
+}
+
+.background-2 {
+	background-color: $upper-color;
+}
+
 
 
 @media (max-width: 640px) {
-	.circle {
-		width: 45px;
-		height: 45px;
-	}
-
 	.upper-container{
 		height: 230px;
 		h1 {
-			font-size: 30px;
+			font-size: 40px;
 		}
 		h2 {
 			font-size: 20px;
+		}
+
+ 		.circle {
+			width: 45px;
+			height: 45px;
 		}
 	}
 }
