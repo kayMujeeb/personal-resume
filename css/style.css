@@ -86,7 +86,8 @@ body {
     width: 85px;
     padding-right: 30px; }
   .circle:hover {
-    opacity: 0; }
+    background-image: url("../assets/images/face.png");
+    background-size: cover; }
 
 .lower-container {
   /* Rectangle 7: */

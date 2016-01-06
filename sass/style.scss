@@ -113,7 +113,8 @@ body {
     }
 	
 	&:hover {
-		opacity: 0;
+		background-image: url('../assets/images/face.png');
+		background-size: cover;
 	}
 }
 
