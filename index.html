@@ -8,9 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/fluidbox.min.css">
+        
 
 	</head>
-	<body>
+	<body id="home">
 
     <header class="header"> 
          <div class ="upper-container">
@@ -22,31 +24,78 @@
         <div class="circle">
         </div>   
 
+        <div class="bar-logo">
+           <a href="#home"></a> 
+        </div>
         <div class="bar">
             <ul>
-              <li><a href="#gplus"><img src="assets/images/google-plus2.png"></a></li>
-              <li><a href="#linkedin"><img src="assets/images/linkedin.png"></a></li>
+              <li><a href="https://github.com/kayMujeeb" target="_blank"><img src="assets/images/github.png"></a></li>
+              <li><a href="https://www.linkedin.com/in/khurrum-a-mujeeb-2b01285a" target="_blank"><img src="assets/images/linkedin.png"></a></li>
               <li><a href="https://www.instagram.com/kayjeeb/" target="_blank"><img src="assets/images/instagram.png"></a></li>
               <ul>
-                  <li><a class="active" href="#home">I do</a></li>
-                  <li><a href="#news">I've done</a></li>
+                  <li><a id="i-do" href="#do">I do</a></li>
+                  <li><a id="ive-done" href="#done">I've done</a></li>
               </ul>
             </ul>
         </div>
     </header>        
 
+    
     <div class="lower-container">
+    <a class="anchor" id="do"></a>
         <h1>I Do </h1>
+        <div class="lower-banner automation">
+            <h1>Automation</h1>
+            <h2></h2>
+        </div>
+        <div class="lower-banner web">
+            <h1>Web</h1>
+        </div>
+        <div class="lower-banner explore">
+            <h1>Exploratory Testing</h1>
+        </div>
+        <div class="lower-banner tools">
+            <h1>Tools</h1>
+        </div>
+
     </div>
 
-    <div class="lower-container background-2">
+    
+    <div class="lower-container background-done">
+    <a class="anchor" id="done"></a>
         <h1>I've Done</h1>
+
+        <div class ="portfolio-banner portfolio-banner-right">
+            <h2>Pivotal Hack</h2>
+            <div class="banner p-hack">
+                <a href="assets/images/mention.png"><img src="assets/images/mention.png"></a>
+            </div>
+            <h3>Design + HTML/CSS</h3>
+        </div>
+
+        <div class ="portfolio-banner portfolio-banner-left">
+            <h2>Mastercard Next</h2>
+            <div class="banner master-next">
+                <a href="assets/images/favr-login.png"><img src="assets/images/favr-login.png"></a>
+                <a href="assets/images/favr-menu.png"><img src="assets/images/favr-menu.png"></a>
+            </div>
+            <h3>Design</h3>
+        </div>
+
+        <div class ="portfolio-banner portfolio-banner-right">
+            <h2>Startup Weekend</h2>
+            <div class="banner start-weekend">
+                <a href="assets/images/bb-splash-page.png"><img src="assets/images/bb-splash-page.png"></a>
+                <a href="assets/images/bb-select-screen.png"><img src="assets/images/bb-select-screen.png"></a>
+            </div>
+            <h3>Design + iOS</h3>
+        </div>
     </div>
-
-
 
 
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.1/js/jquery.fluidbox.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
