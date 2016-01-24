@@ -28,32 +28,34 @@ $(window).on('scroll', function() {
 		.css ('top', -px + 'px');
 		// .css ('opacity', op);
 
-	$('.circle')
-		.css ('top', -px + 'px')
+	// $('.circle')
+	// 	.css ('top', -px + 'px')
 
 	if (px > 2) {
 		$('.bar').addClass('bar-background');
-		$('.bar-logo').fadeIn();
+		$('.circle').addClass('bar-logo');
+		// $('.bar-logo').fadeIn();
 	}
 	else {
 		$('.bar').removeClass('bar-background');
-		$('.bar-logo').fadeOut();
+		$('.circle').removeClass('bar-logo');
+		// $('.bar-logo').fadeOut();
 	}
 
-	if (px > 640 && px < 1349) {
-		$('#i-do').addClass('active');
-		$('#ive-done').removeClass('active');
-	}
+	// if (px > 640 && px < 1349) {
+	// 	$('#i-do').addClass('active');
+	// 	$('#ive-done').removeClass('active');
+	// }
 
-	else if (px > 1349) {
-		$('#ive-done').addClass('active');
-		$('#i-do').removeClass('active');
-	}
+	// else if (px > 1349) {
+	// 	$('#ive-done').addClass('active');
+	// 	$('#i-do').removeClass('active');
+	// }
 
-	else {
-		$('#ive-done').removeClass('active');
-		$('#i-do').removeClass('active');	
-	}
+	// else {
+	// 	$('#ive-done').removeClass('active');
+	// 	$('#i-do').removeClass('active');	
+	// }
 	
 });
 

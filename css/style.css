@@ -25,7 +25,7 @@ body {
     z-index: 0; }
     .header .upper-container h1 {
       font-family: AvenirNext-Bold;
-      font-size: 80px;
+      font-size: 7.5vw;
       color: #FFFFFF;
       padding-left: 25px;
       white-space: nowrap;
@@ -41,7 +41,7 @@ body {
       .header .upper-container h1 span {
         font-family: 'Courier';
         padding-bottom: 100px;
-        font-size: 50px;
+        font-size: 6vw;
         animation: blink 1s infinite; }
 @keyframes type {
   from {
@@ -58,30 +58,27 @@ body {
     opacity: .0; } }
     .header .upper-container h2 {
       font-family: 'Abel', sans-serif;
-      font-size: 45px;
+      font-size: 4.4vw;
       color: #B2FF39;
       padding-left: 25px;
       margin-top: 5px;
       margin-bottom: 10px;
       font-weight: 200;
-      line-height: 35px;
+      line-height: 3.2vw;
       transition: all 1s; }
 
 .circle {
-  position: absolute;
-  z-index: 1;
-  width: 11em;
-  height: 11em;
-  background-image: url("../assets/images/km-logo3.png");
-  background-size: cover;
-  color: white;
-  border: none;
-  border-radius: 5em;
-  cursor: pointer;
-  outline: none;
   float: right;
-  overflow: hidden;
-  margin: 3.5% auto auto 84%; }
+  position: absolute;
+  margin: 3.5% auto auto 84%;
+  transition: all 1s;
+  z-index: 1;
+  width: 15vmax;
+  height: 15vmax;
+  border-radius: 50%;
+  content: 'viewport-units-buggyfill; width: 33vmax; height: 33vmax; line-height: 33vmax; letter-spacing: 1.65vmax; top: calc(50vh - 33vmax / 2); left: calc(50vw - 33vmax / 2);';
+  background-image: url("../assets/images/km-logo3.png");
+  background-size: cover; }
   .circle img {
     width: 85px;
     padding-right: 30px; }
@@ -89,17 +86,29 @@ body {
     background-image: url("../assets/images/face.png");
     background-size: cover; }
 
+.move {
+  position: fixed;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 5em;
+  cursor: pointer;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 6px;
+  margin-bottom: 5px; }
+
 .lower-container {
   /* Rectangle 7: */
   height: 100%;
   width: 100%;
   margin: auto;
   background: #061622;
-  position: relative;
   color: white;
   float: left;
-  z-index: 1;
-  overflow: hidden; }
+  position: relative;
+  z-index: 1; }
   .lower-container h1 {
     font-family: AvenirNext-Bold;
     font-size: 70px;
@@ -112,7 +121,7 @@ body {
     margin-bottom: 0px; }
 
 .lower-banner {
-  height: 8.125em;
+  height: 18%;
   float: left;
   width: 100%; }
   .lower-banner h1 {
@@ -142,77 +151,82 @@ body {
   background-color: #52AA8A; }
 
 .tools {
-  height: 150px;
+  height: 20%;
   background-color: #3AADD6; }
 
 .portfolio-banner {
-  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 10%;
   height: 25%;
   width: 100%; }
   .portfolio-banner .banner {
     width: 50%;
-    height: 100%; }
-  .portfolio-banner h2 {
-    font-family: AvenirNext-Bold;
-    font-size: 40px;
-    width: 40%;
-    color: #FFFFFF;
-    margin-top: 30px;
-    overflow: hidden;
-    max-width: 30em;
-    margin-bottom: 0px; }
-  .portfolio-banner h3 {
-    font-family: 'Abel', sans-serif;
-    font-size: 20px;
-    color: #B2FF39;
-    margin: 0; }
+    height: 100%;
+    position: relative; }
+    .portfolio-banner .banner h2 {
+      font-family: AvenirNext-Bold;
+      font-size: 3vw;
+      color: #FFFFFF;
+      line-height: 40px;
+      max-width: 30em;
+      margin-top: 30px;
+      margin-bottom: 0px; }
+    .portfolio-banner .banner h3 {
+      font-family: 'Abel', sans-serif;
+      font-size: 1.5vw;
+      color: #20172C;
+      margin: 0;
+      font-weight: 200; }
+    .portfolio-banner .banner p {
+      font-family: 'Abel', sans-serif;
+      font-size: 1.22vw;
+      max-width: 80%;
+      color: #20172C;
+      margin: 0;
+      font-weight: 200; }
+    .portfolio-banner .banner img {
+      width: 50%; }
 
 .portfolio-banner-right .banner {
   float: right;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; }
-.portfolio-banner-right h2, .portfolio-banner-right h3 {
-  float: left;
-  padding-left: 25px; }
+  border-top-left-radius: 562.5em;
+  border-bottom-left-radius: 562.5em; }
+.portfolio-banner-right h2, .portfolio-banner-right h3, .portfolio-banner-right p {
+  padding-left: 50px; }
 .portfolio-banner-right img {
-  float: right; }
+  float: left;
+  margin-left: 25px; }
 
 .portfolio-banner-left .banner {
   float: left;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; }
-.portfolio-banner-left h2, .portfolio-banner-left h3 {
-  float: right;
-  width: 30%; }
+  border-top-right-radius: 562.5em;
+  border-bottom-right-radius: 562.5em; }
+.portfolio-banner-left h2, .portfolio-banner-left h3, .portfolio-banner-left p {
+  padding-left: 25px; }
 .portfolio-banner-left img {
-  float: left; }
+  float: right;
+  margin-right: 25px; }
 
 .p-hack {
   background-color: #99E832; }
-  .p-hack img {
-    width: 40%;
-    height: 20%;
-    margin-top: 5px;
-    margin-right: 5px;
-    border-radius: 8px; }
+
+.p-hack-img img {
+  width: 37%;
+  margin-top: -6.5%; }
 
 .master-next {
-  background-color: #DDFE7C; }
-  .master-next img {
-    width: 14%;
-    height: 2%;
-    margin-top: 5px;
-    margin-left: 5px;
-    border-radius: 8px; }
+  background-color: #FE907C; }
+
+.master-next-img img {
+  width: 15%;
+  margin-top: -6.5%; }
 
 .start-weekend {
   background-color: #3AADD6; }
-  .start-weekend img {
-    width: 14%;
-    height: 2%;
-    margin-top: 5px;
-    margin-right: 5px;
-    border-radius: 8px; }
+
+.start-weekend-img img {
+  width: 15%;
+  margin-top: -6.5%; }
 
 .click-me {
   width: 10em;
@@ -288,8 +302,7 @@ body {
   margin-left: 50%;
   margin-right: 50%;
   margin-top: 6px;
-  margin-bottom: 5px;
-  display: none; }
+  margin-bottom: 5px; }
   .bar-logo a {
     width: 50px;
     height: 50px;
@@ -310,19 +323,5 @@ a.anchor {
   position: relative;
   top: -25px;
   visibility: hidden; }
-
-@media (max-width: 640px) {
-  .upper-container {
-    height: 230px; }
-    .upper-container h1 {
-      font-size: 40px; }
-    .upper-container h2 {
-      font-size: 20px; }
-    .upper-container .circle {
-      width: 45px;
-      height: 45px; } }
-@media (max-width: 320px) {
-  .upper-container h1 {
-    font-size: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
